@@ -3,7 +3,7 @@
     const accessToServer = {
         token: 'fb0ad808-7cc9-442a-a27e-b803119b4f77',
         groupID: 'cohort12',
-        serverAddress: 'https://praktikum.tk'
+        serverAddress: 'https://nomoreparties.co'
     }
 
     const serverData = new Api(accessToServer);
