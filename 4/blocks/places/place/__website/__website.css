@@ -1,0 +1,19 @@
+@import url(__url-heading/__url-heading.css);
+@import url(__url/__url.css);
+@import url(link-hover/link-hover.css);
+
+.place__website {
+    width: 100%;
+    max-width: 484px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 425px) {
+
+    .place__website {
+        display: none;
+    }
+
+}

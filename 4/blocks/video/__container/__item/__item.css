@@ -1,0 +1,41 @@
+@import url(__text/__text.css);
+@import url(__icon-play/__icon-play.css);
+@import url(__item-bg/__item-bg.css);
+@import url(__link/__link.css);
+@import url(link-hover/link-hover.css);
+
+.video__item {
+    position: relative;
+    width: 100%;
+    max-width: 583px;
+    margin: 0 auto;
+    min-height: 323px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .video__item {
+        max-width: 456px;
+        min-height: 288px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .video__item {
+        max-width: 352px;
+        min-height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .video__item {
+        max-width: 272px;
+        min-height: 192px;
+        max-height: 192px;
+    }
+
+}

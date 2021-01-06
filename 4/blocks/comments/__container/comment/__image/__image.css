@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+
+    .comment__image {
+        display: flex;
+        margin: 0 auto;
+    }
+
+}

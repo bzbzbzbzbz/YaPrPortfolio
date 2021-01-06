@@ -1,0 +1,39 @@
+@import url(__item/__item.css);
+@import url(cover-dark/cover-dark.css);
+
+
+.video__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .video__container {
+        max-width: 720px;
+        min-height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .video__container {
+        max-width: 343px;
+        grid-template-columns: unset;
+        grid-template-rows: 50% 50%;
+        row-gap: 8px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .video__container {
+        max-width: 288px;
+    }
+
+}

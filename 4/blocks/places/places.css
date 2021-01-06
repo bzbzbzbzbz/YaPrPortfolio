@@ -1,0 +1,41 @@
+@import url(place/place.css);
+
+.places {
+    max-width: 984px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 72px;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .places {
+        max-width: 928px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .places {
+        max-width: 720px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .places {
+        max-width: 375px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .places {
+        max-width: 320px;
+    }
+
+}

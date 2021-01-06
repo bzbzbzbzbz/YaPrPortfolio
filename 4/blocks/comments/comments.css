@@ -1,0 +1,41 @@
+@import url(content-subtitle/content-subtitle.css);
+@import url(content-title/content-title.css);
+@import url(__container/__container.css);
+
+.comments {
+    max-width: 1184px;
+    width: 100%;
+    margin: 0 auto 102px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .comments {
+        max-width: 928px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .comments {
+        max-width: 660px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .comments {
+        max-width: 343px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .comments {
+        max-width: 288px;
+    }
+
+}

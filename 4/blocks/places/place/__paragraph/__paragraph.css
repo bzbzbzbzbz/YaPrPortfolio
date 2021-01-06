@@ -1,0 +1,14 @@
+@import url(__paragraph-text/__paragraph-text.css);
+
+.place__paragraph {
+    display: grid;
+    row-gap: 36px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .place__paragraph {
+        row-gap: 24px;
+    }
+
+}

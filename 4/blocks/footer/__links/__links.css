@@ -1,0 +1,30 @@
+@import url(__link-item/__link-item.css);
+
+.footer__links {
+    display: grid;
+    grid-template-areas: 'a a a a a';
+    column-gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 695px) {
+
+    .footer__links {
+        grid-template-areas: 'p';
+        row-gap: 22px;
+        margin-bottom: 48px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    
+    .footer__links {
+        grid-template-areas: 'p';
+        row-gap: 22px;
+        margin-bottom: 48px;
+    }
+
+}

@@ -1,0 +1,47 @@
+.cover__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    min-height: 594px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .cover__bg {
+        max-width: 1024px;
+        min-height: 562px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .cover__bg {
+        max-width: 768px;
+        min-height: 500px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .cover__bg {
+        max-width: 768px;
+        min-height: 272px;
+    }
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+    .cover__bg {
+        max-width: 288px;
+        min-height: 216px;
+    }
+
+}

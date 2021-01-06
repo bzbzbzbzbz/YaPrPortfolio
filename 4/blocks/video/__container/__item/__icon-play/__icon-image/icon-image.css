@@ -1,0 +1,27 @@
+@import url(_first/_first.css);
+@import url(_second/_second.css);
+
+.video__icon-image {
+    position: relative;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .video__icon-image {
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .video__icon-image {
+        margin-top: 16px;
+        margin-left: 16px;
+    }
+
+}

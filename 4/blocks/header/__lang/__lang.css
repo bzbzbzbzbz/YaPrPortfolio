@@ -1,0 +1,8 @@
+@import url(-link/-link.css);
+@import url(link-hover/link-hover.css);
+
+.header__lang {
+    position: absolute;
+    top: 40%;
+    right: 0;
+}

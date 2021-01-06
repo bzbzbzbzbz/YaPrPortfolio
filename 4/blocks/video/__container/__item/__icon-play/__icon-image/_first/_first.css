@@ -1,0 +1,20 @@
+.video__icon-image_first {
+    margin-bottom: 54px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .video__icon-image_first {
+        margin-bottom: 36px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .video__icon-image_first {
+        margin-bottom: 41px;
+    }
+
+}

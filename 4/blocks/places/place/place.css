@@ -1,0 +1,38 @@
+@import url(__image/__image.css);
+@import url(__paragraph/__paragraph.css);
+@import url(__title/__title.css);
+@import url(__website/__website.css);
+
+.place {
+    display: grid;
+    grid-template-areas: 'h url'
+                         'ph txt';
+    column-gap: 40px;
+    row-gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .place {
+        column-gap: 28px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .place {
+        column-gap: 28px;
+        grid-template-areas: 'p';
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .place {
+        column-gap: 28px;
+        grid-template-areas: 'p';
+    }
+
+}

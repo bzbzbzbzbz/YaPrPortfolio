@@ -1,0 +1,35 @@
+.video__item-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 583px;
+    min-height: 323px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .video__item-bg {
+        max-width: 456px;
+        min-height: 288px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .video__item-bg {
+        max-width: 352px;
+        min-height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .video__item-bg {
+        min-height: 192px;
+    }
+
+}

@@ -1,0 +1,23 @@
+@import url(__title/__title.css);
+@import url(__subtitle/__subtitle.css);
+@import url(__duration/__duration.css);
+
+.video__text {
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .video__text {
+        margin-left: 25px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .video__text {
+        margin-left: 16px;
+    }
+
+}

@@ -1,0 +1,38 @@
+.comment__quote-author {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+
+    .comment__quote-author {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .comment__quote-author {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .comment__quote-author {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}

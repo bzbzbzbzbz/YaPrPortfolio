@@ -1,0 +1,10 @@
+.video__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 583px;
+    height: 100%;
+    max-height: 323px;
+    z-index: 3;
+}
