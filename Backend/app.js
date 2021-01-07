@@ -1,0 +1,68 @@
+const express = require('express');
+const helmet = require('helmet');
+require('dotenv').config();
+const mongoose = require('mongoose');
+const { errors } = require('celebrate');
+const bodyParser = require('body-parser');
+const { limiter } = require('./middlewares/ratelimiter');
+const authRouter = require('./routes/auth');
+const usersRouter = require('./routes/users');
+const articlesRouter = require('./routes/articles');
+const auth = require('./middlewares/auth');
+const NotFound = require('./errors/not-found');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
+
+const { PORT = 3000 } = process.env;
+
+const app = express();
+
+mongoose.connect('mongodb://localhost:27017/newsdb', {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
+
+app.use(helmet());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(limiter);
+app.use(requestLogger);
+
+app.use('/', authRouter);
+app.use(auth);
+app.use('/', usersRouter);
+app.use('/', articlesRouter);
+
+app.use('*', () => {
+  throw new NotFound('Запрашиваемый ресурс не найден');
+});
+
+app.use(errorLogger);
+app.use(errors());
+
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  const { statusCode = 500, message } = err;
+
+  if (err.name === 'ValidationError') {
+    return res.status(400).send('Некорректная ссылка');
+  }
+  if (err.name === 'CastError') {
+    return res.status(400).send({ message: 'Некорректный ID' });
+  }
+  if (err.name === 'Пользователь не найден') {
+    return res.status(401).send({ message: err.name });
+  }
+  if (err.name === 'Нет прав') {
+    return res.status(403).send({ message: err.name });
+  }
+  if (err.code === 11000) {
+    return res.status(409).send({ message: 'Такая почта уже зарегистрирована' });
+  }
+  if (err.name === 'Карточка с таким ID не существует') {
+    return res.status(404).send({ message: err.name });
+  }
+  return res.status(statusCode).send({ message: statusCode === 500 ? 'На сервере произошла ошибка' : message });
+});
+
+app.listen(PORT);
